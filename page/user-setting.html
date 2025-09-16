@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>基本资料</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <style>
+        .layui-form-item .layui-input-company {width: auto;padding-right: 10px;line-height: 38px;}
+    </style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <div class="layui-form layuimini-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label required">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" lay-verify="required" lay-reqtext="姓名不能为空" placeholder="请输入姓名"  value="孔令暄" class="layui-input">
+                    <tip>填写自己的姓名。</tip>
+                </div>
+            </div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label required">学号/工号</label>
+			    <div class="layui-input-block">
+			        <input type="text" name="id" lay-verify="required" lay-reqtext="学号/工号不能为空" placeholder="请输入学号/工号"  value="" class="layui-input">
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label required">身份</label>
+			    <div class="layui-input-block">
+			        <select name="idsf" lay-verify="required" lay-reqtext="还没选择身份" placeholder="请选择身份" class="layui-input">
+						<option>学生</option>
+						<option>老师</option>
+						<option>管理员</option>
+					</select>
+			        <tip>选择自己的身份。</tip>
+			    </div>
+			</div>
+            <div class="layui-form-item">
+                <label class="layui-form-label required">年龄</label>
+                <div class="layui-input-block">
+                    <input type="number" name="age" lay-verify="required" lay-reqtext="年龄不能为空" placeholder="请输入年龄"  value="20" class="layui-input">
+                </div>
+            </div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label required">手机号</label>
+			    <div class="layui-input-block">
+			        <input type="number" name="phone" lay-verify="required" lay-reqtext="手机号不能为空" placeholder="请输入手机号"  value="12345678910" class="layui-input">
+			    </div>
+			</div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">邮箱</label>
+                <div class="layui-input-block">
+                    <input type="email" name="email"  placeholder="请输入邮箱"  value="123@qq.com" class="layui-input">
+                </div>
+            </div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label required">专业</label>
+			    <div class="layui-input-block">
+			        <input type="text" name="major" lay-verify="required" lay-reqtext="专业不能为空，非学生请填无" placeholder="请输入专业"  value="" class="layui-input">
+			        <tip>填写自己的专业。</tip>
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label required">学历</label>
+			    <div class="layui-input-block">
+			        <select name="edbg" lay-verify="required" lay-reqtext="还没选择学历" placeholder="请选择学历" class="layui-input">
+						<option>本科</option>
+						<option>硕士</option>
+						<option>博士</option>
+						<option>大专</option>
+						<option>高中</option>
+					</select>
+			        <tip>选择自己的学历。</tip>
+			    </div>
+			</div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">备注信息</label>
+                <div class="layui-input-block">
+                    <textarea name="remark" class="layui-textarea" placeholder="请输入备注信息"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use(['form','miniTab'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            miniTab = layui.miniTab;
+
+        //监听提交
+        form.on('submit(saveBtn)', function (data) {
+            var index = layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            }, function () {
+                layer.close(index);
+                miniTab.deleteCurrentByIframe();
+            });
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

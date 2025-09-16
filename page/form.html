@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+	<link rel="stylesheet" href="../lib/lay-module/step-lay/step.css" media="all">
+	<style>
+			.myrequired{
+				color: red;
+				font-size: 20px;
+			}
+		</style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+            <legend>个人简历</legend>
+        </fieldset>
+
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+				<div class="layui-inline">
+				    <label class="layui-form-label">
+						<span class="myrequired">*</span>姓名</label>
+				    <div class="layui-input-block">
+				        <input name="username" lay-verify="required" lay-reqtext="姓名是必填项，岂能为空？" placeholder="请输入" autocomplete="off" class="layui-input">
+				    </div>
+				</div>
+				<div class="layui-inline">
+				    <label class="layui-form-label">
+						<span class="myrequired">*</span>年龄</label>
+				    <div class="layui-input-inline">
+				        <input type="number" name="age" lay-verify="required" placeholder="请输入年龄" lay-reqtext="年龄不能为空" autocomplete="off" class="layui-input">
+				    </div>
+				</div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">
+						<span class="myrequired">*</span>手机号</label>
+                    <div class="layui-input-inline">
+                        <input type="tel" name="phone" lay-verify="required|phone" lay-reqtext="手机号不能为空" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">
+						<span class="myrequired">*</span>邮箱</label>
+                    <div class="layui-input-inline">
+                        <input type="email" name="email" lay-verify="email" lay-reqtext="邮箱不能为空" autocomplete="off" class="layui-input">
+                    </div>
+                </div><br>
+				<div class="layui-inline">
+				                <label class="layui-form-label">
+									<span class="myrequired">*</span>性别</label>
+				                <div class="layui-input-block">
+				                    <input type="radio" name="sex" value="男" title="男" checked>
+				                    <input type="radio" name="sex" value="女" title="女">
+				                </div>
+				            </div><br>
+							
+				<label class="layui-form-label">
+				    照片</label>
+				<div class="layui-input-inline">
+				    <!-- 上传按钮 -->
+				    <button type="button" class="layui-btn" id="uploadPhoto">
+				        <i class="layui-icon">&#xe67c;</i>选择照片
+				    </button>
+				    <!-- 用于存放上传的图片预览 -->
+				    <div class="layui-upload-list" style="margin-top: 10px;">
+				        <img class="layui-upload-img"  id="photoPreview" style="max-width: 200px;  max-height: 200px;">
+				        <p id="photoText"></p>
+				    </div>
+				    <!-- 用于存储图片路径的隐藏输入框，表单提交时会提交该值 -->
+				    <input type="hidden" name="photo" id="photoPath">
+				</div>
+            </div>
+			
+			
+			
+			<!-- 需要引入Layui的JS来初始化上传组件 -->
+			
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">就读时间</label>
+                    <div class="layui-input-inline" >
+                        <input type="text" name="date1" id="date1"  placeholder="开始日期" autocomplete="off" class="layui-input ">
+                    </div>
+				    <div class="layui-form-mid">-</div>
+				    <div class="layui-input-inline">
+				        <input type="text" name="date2" id="date2"  placeholder="结束日期" autocomplete="off" class="layui-input ">
+				    </div>
+					<label class="layui-form-label">学校名称</label>
+					<div class="layui-input-inline">
+					    <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-inline">
+					                    <label class="layui-form-label">学历</label>
+					                    <div class="layui-input-inline">
+					                        <select name="modules" lay-search="">
+					                            <option value="">请选择</option>
+					                            <option value="1">高中</option>
+					                            <option value="2">大专</option>
+					                            <option value="3">本科</option>
+					                            <option value="4">硕士</option>
+					                            <option value="5">研究生</option>
+					                            <option value="6">博士</option>
+					                        </select>
+					                    </div>
+					                </div>
+                </div><br>
+				
+				<div class="layui-inline">
+				    <label class="layui-form-label">就读时间</label>
+				    <div class="layui-input-inline">
+				        <input type="text" name="date3" id="date3"  placeholder="开始日期" autocomplete="off" class="layui-input ">
+				    </div>
+				    <div class="layui-form-mid">-</div>
+				    <div class="layui-input-inline">
+				        <input type="text" name="date4" id="date4"  placeholder="结束日期" autocomplete="off" class="layui-input ">
+				    </div>
+					<label class="layui-form-label">学校名称</label>
+					<div class="layui-input-inline">
+					    <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-inline">
+					                    <label class="layui-form-label">学历</label>
+					                    <div class="layui-input-inline">
+					                        <select name="modules" lay-search="">
+					                            <option value="">请选择</option>
+					                            <option value="1">高中</option>
+					                            <option value="2">大专</option>
+					                            <option value="3">本科</option>
+					                            <option value="4">硕士</option>
+					                            <option value="5">研究生</option>
+					                            <option value="6">博士</option>
+					                        </select>
+					                    </div>
+					                </div>
+				</div><br>
+				
+				<div class="layui-inline">
+				    <label class="layui-form-label">就读时间</label>
+				    <div class="layui-input-inline">
+				        <input type="text" name="date5" id="date5"  placeholder="开始日期" autocomplete="off" class="layui-input ">
+				    </div>
+				    <div class="layui-form-mid">-</div>
+				    <div class="layui-input-inline">
+				        <input type="text" name="date6" id="date6"  placeholder="结束日期" autocomplete="off" class="layui-input ">
+				    </div>
+					<label class="layui-form-label">学校名称</label>
+					<div class="layui-input-inline">
+					    <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">学历</label>
+						<div class="layui-input-inline">
+							<select name="modules" 	lay-search="">
+								<option value="">请选择</option>
+								<option value="1">高中</option>
+								<option value="2">大专</option>
+								<option value="3">本科</option>
+								<option value="4">硕士</option>
+								<option value="5">研究生</option>
+								<option value="6">博士</option>
+							</select>
+						</div>
+					</div>
+				</div><br>	
+            </div>
+			
+			
+			<div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">在校经历</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+			<div class="layui-form-item layui-form-text">
+			    <label class="layui-form-label">工作经历</label>
+			    <div class="layui-input-block">
+			        <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+			    </div>
+			</div>
+			<div class="layui-form-item layui-form-text">
+			    <label class="layui-form-label">项目经历</label>
+			    <div class="layui-input-block">
+			        <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+			    </div>
+			</div>
+			
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即上传</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+
+<script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form','upload', 'layedit', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date3',
+			type:"month",
+			
+        });
+		laydate.render({
+		    elem: '#date4',
+			type:"month"
+			
+		});
+		laydate.render({
+		    elem: '#date5',
+			type:"month"
+		
+		});
+		laydate.render({
+		    elem: '#date6',
+			type:"month"
+			
+		});
+		laydate.render({
+		    elem: '#date1',
+			type:"month",
+		});
+		laydate.render({
+		    elem: '#date2',
+			type:"month"
+		});
+
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            }
+            , pass: [
+                /^[\S]{6,12}$/
+                , '密码必须6到12位，且不能出现空格'
+            ]
+            , content: function (value) {
+                layedit.sync(editIndex);
+            }
+        });
+
+        //监听指定开关
+        form.on('switch(switchTest)', function (data) {
+            layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
+                offset: '6px'
+            });
+            layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+        //表单初始赋值
+        form.val('example', {
+			
+            "username": "贤心" // "name": "value"
+            , "password": "123456"
+            , "interest": 1
+            , "like[write]": true //复选框选中状态
+            , "close": true //开关状态
+            , "sex": "女"
+            , "desc": "我爱 layui"
+        })
+		var upload = layui.upload,
+		$ = layui.jquery;
+		
+		// 执行实例
+		var uploadInst = upload.render({
+		    elem: '#uploadPhoto' // 绑定上传按钮
+		    ,url: 'https://httpbin.org/post' // 上传接口（需要你自己实现后端接口）
+		    ,accept: 'images' // 只允许上传图片
+		    ,acceptMime: 'image/*' // 图片类型
+		    ,exts: 'jpg|jpeg|png|gif' // 允许的文件后缀
+		    ,auto: true // 选择文件后自动上传
+		    ,before: function(obj){
+		        // 上传前预览
+		        obj.preview(function(index, file, result){
+		            $('#photoPreview').attr('src', result); // 图片预览
+		        });
+		    }
+		    ,done: function(res){
+		        // 上传成功后的处理
+		        if(res.code === 0){
+		            // 假设后端返回的数据格式为 {code:0, data:{src: '图片路径'}}
+		            $('#photoPath').val(res.data.src); // 存储图片路径
+		            $('#photoText').html('<span style="color: #4cae4c;">上传成功</span>');
+		        } else {
+		            //$('#photoText').html('<span style="color: #dd4b39;">上传失败：'+res.msg+'</span>');
+		        }
+		    }
+		    ,error: function(){
+		        // 上传出错处理
+		    }
+		});
+
+
+    });
+</script>
+
+
+</body>
+</html>

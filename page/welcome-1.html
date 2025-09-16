@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页二</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <style>
+        .layui-card {border:1px solid #f2f2f2;border-radius:5px;}
+        .icon {margin-right:10px;color:#1aa094;}
+        .icon-cray {color:#ffb800!important;}
+        .icon-blue {color:#1e9fff!important;}
+        .icon-tip {color:#ff5722!important;}
+        .layuimini-qiuck-module {text-align:center;margin-top: 10px}
+        .layuimini-qiuck-module a i {display:inline-block;width:100%;height:60px;line-height:60px;text-align:center;border-radius:2px;font-size:30px;background-color:#F8F8F8;color:#333;transition:all .3s;-webkit-transition:all .3s;}
+        .layuimini-qiuck-module a cite {position:relative;top:2px;display:block;color:#666;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:14px;}
+        .welcome-module {width:100%;height:210px;}
+        .panel {background-color:#fff;border:1px solid transparent;border-radius:3px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
+        .panel-body {padding:10px}
+        .panel-title {margin-top:0;margin-bottom:0;font-size:12px;color:inherit}
+        .label {display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em;margin-top: .3em;}
+        .layui-red {color:red}
+        .main_btn > p {height:40px;}
+        .layui-bg-number {background-color:#F8F8F8;}
+        .layuimini-notice:hover {background:#f6f6f6;}
+        .layuimini-notice {padding:7px 16px;clear:both;font-size:12px !important;cursor:pointer;position:relative;transition:background 0.2s ease-in-out;}
+        .layuimini-notice-title,.layuimini-notice-label {
+            padding-right: 70px !important;text-overflow:ellipsis!important;overflow:hidden!important;white-space:nowrap!important;}
+        .layuimini-notice-title {line-height:28px;font-size:14px;}
+        .layuimini-notice-extra {position:absolute;top:50%;margin-top:-8px;right:16px;display:inline-block;height:16px;color:#999;}
+    </style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-warning icon"></i>毕业生去向数据统计</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10">
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>2025毕业生总人数</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">1222万</h1>
+														<small>创历史新高</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-cyan">实时</span>
+                                                        <h5>就业占比</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">65%</h1>
+														<small>含正规就业与灵活就业</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">实时</span>
+                                                        <h5>升学占比</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">25%</h1>
+                                                        <small>国内考研+海外深造</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-green">实时</span>
+                                                        <h5>缓冲占比</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">10%</h1>
+                                                        <small>处于失业、备考或观望状态</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-credit-card icon icon-blue"></i>学生快捷入口</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10 layuimini-qiuck">
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/table.html" data-title="企业在招职位" data-icon="fa fa-coffee">
+                                                <i class="fa fa-coffee"></i>
+                                                <cite>企业在招职位</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/table - 副本 (2).html" data-title="查看投递进度" data-icon="fa fa-paper-plane">
+                                                <i class="fa fa-paper-plane"></i>
+                                                <cite>查看投递进度</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/form.html" data-title="毕业生个人简历" data-icon="fa fa-file-text-o">
+                                                <i class="fa fa-file-text-o"></i>
+                                                <cite>毕业生个人简历</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/form (2).html" data-title="毕业生去向填报" data-icon="fa fa-plane">
+                                                <i class="fa fa-plane"></i>
+                                                <cite>毕业生去向填报</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/welcome-2 - 副本.html" data-title="信息咨询" data-icon="fa fa-pie-chart">
+                                                <i class="fa fa-pie-chart"></i>
+                                                <cite>信息咨询</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/user-setting.html" data-title="基本资料" data-icon="fa fa-briefcase">
+                                                <i class="fa fa-briefcase"></i>
+                                                <cite>基本资料</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/user-password.html" data-title="修改密码" data-icon="fa fa-unlock-alt">
+                                                <i class="fa fa-unlock-alt"></i>
+                                                <cite>修改密码</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="https://www.baidu.com" data-title="百度搜索" data-icon="fa fa-search">
+                                                <i class="fa fa-search"></i>
+                                                <cite>百度搜索</cite>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>近九年毕业生去向报表统计</div>
+                            <div class="layui-card-body">
+                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-bullhorn icon icon-tip"></i>就业要闻</div>
+                    <div class="layui-card-body layui-text">
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">中办、国办印发《毕业生就业意见》</div>
+                            <div class="layuimini-notice-extra">2025-04-08 23:06</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                近日，中共中央办公厅、国务院办公厅印发《关于加快构建普通高等学校毕业生高质量就业服务体系的意见》（以下简称《意见》），对构建高质量就业服务体系促进高校毕业生高质量充分就业有关工作作出部署。
+                                 <br>                               
+                                《意见》坚持以习近平新时代中国特色社会主义思想为指导，深入贯彻党的二十大和二十届二中、三中全会精神，实施就业优先战略，把高校毕业生就业作为重中之重，统筹抓好教育、培训和就业，以产业端人才需求和就业端评价反馈为指引，全链条优化培养供给、就业指导、求职招聘、帮扶援助、监测评价等服务，开发更多有利于发挥所学所长的就业岗位，完善供需对接机制，力求做到人岗相适、用人所长、人尽其才，提升就业质量和稳定性。经过3至5年持续努力，基本建立覆盖全员、功能完备、保障有力的服务体系，为促进高校毕业生高质量充分就业提供坚实保障。
+                                 <br>                   
+                                《意见》提出，优化培养供给体系。科学研判人才发展趋势及供需状况，建设人才需求数据库，开展人才供需关系前瞻性分析。以促进供需适配为导向动态调整高等教育专业和资源结构布局，推动高等教育规模、结构、质量更加契合经济社会高质量发展要求。完善招生计划、人才培养与就业联动机制，优化招生计划分配方式，鼓励高校建立更灵活的学习制度，完善转专业、辅修其他专业等规定。
+                                 <br>                               
+                                《意见》明确，强化就业指导体系、健全求职招聘体系、完善帮扶援助体系、创新监测评价体系。强化生涯教育与就业指导，打造一批国家规划教材、示范课程和教学成果，把就业教育作为全员全过程全方位育人的重要内容，引导牢固树立正确就业观，健全就业实习与见习制度。强化校园招聘和就业市场服务，建设一批区域性、行业性高校毕业生就业市场，挖掘国家重大战略等对高校毕业生的需求，优化规范招聘安排和秩序。发挥多元主体作用，拓宽市场化社会化就业渠道，开发新的就业增长点。健全困难帮扶机制，为帮扶对象提供服务和援助，落实离校未就业毕业生实名就业帮扶要求，实施“宏志助航”就业能力培训项目，有序扩大培训覆盖面。及时掌握就业市场岗位需求和毕业生求职意向等，强化高校毕业生就业质量和工作评价结果使用，作为高校教育教学和学科建设评估、“双一流”建设成效评价等重要因素。
+                                 <br>                               
+                                《意见》要求，巩固支持保障体系。建强高校毕业生就业服务机构，按规定落实高校毕业生就业服务机构、人员、场地、经费“四到位”要求，打造专业化就业指导教师队伍。深化高校毕业生就业研究。推广数字化就业服务新模式，建强国家大学生就业服务平台。营造公平就业环境和良好氛围。强化组织实施，增强工作合力。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">丁薛祥在青年就业创业工作视频会议上强调</div>
+                            <div class="layuimini-notice-extra">2025-04-03 12:57</div>
+                            <div class="layuimini-notice-content layui-hide">
+                               全国高校毕业生等青年就业创业工作视频会议4月2日在京举行。中共中央政治局常委、国务院副总理丁薛祥出席会议并讲话。
+                               <br>
+                               丁薛祥指出，高校毕业生是党和国家宝贵的人才资源，高校毕业生等青年就业创业工作关系千家万户。要深入学习贯彻习近平总书记重要指示精神，贯彻落实党中央和国务院决策部署，坚持把高校毕业生等青年群体就业作为重中之重，确保青年就业水平总体平稳。
+                               <br>
+                               丁薛祥强调，要千方百计增加就业岗位，全力促进高校毕业生高质量充分就业。更加注重面向重点领域、重点行业拓展岗位，在推动产业发展中开发新的就业增长点。抓好城乡基层稳岗增岗，强化配套政策保障，让高校毕业生“下得去、留得住、干得好”。积极支持中小微企业发展，扩大岗位供给，激发企业吸纳高校毕业生的积极性和主动性。更好发挥政策综合效应，各项促就业政策应出尽出、能早就早，政策性岗位要稳定规模、早招多招。加大创业优惠政策支持和落实力度，促进大学生创新创业并带动就业。
+                               <br>
+                               丁薛祥表示，要用心用情做好就业指导服务工作，帮助毕业生更好择业、更快就业。加强思想政治教育，引导毕业生从国家发展需要和个人实际出发，理性务实选择职业和岗位。落实“一对一”帮扶责任，健全帮扶台账，优先服务好困难毕业生群体。加强就业能力培训，帮助毕业生顺利实现从学校到职场的过渡。
+                               <br>
+                               丁薛祥要求，各地各部门各高校要加强组织领导，压实工作责任，强化督促检查和数据监测，维护毕业生合法权益，营造良好舆论环境，共同做好高校毕业生就业这件事关国计民生的大事。
+                               <br>
+                               国务委员谌贻琴出席会议并讲话。中央和国家机关有关部门、有关人民团体、中央军委机关有关部门，部委直属在京高校负责同志在主会场参加会议。各省、自治区、直辖市人民政府和新疆生产建设兵团负责同志及有关部门单位负责同志在分会场参加会议。人力资源社会保障部、教育部、浙江省人民政府、湖北省人民政府和山东大学主要负责同志，以及高校毕业生代表在会上发言。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">教育部召开高校毕业生离校后促就业工作座谈会</div>
+                            <div class="layuimini-notice-extra">2025-07-25 14:28</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                7月24日，高校毕业生离校后促就业工作座谈会在浙江绍兴召开。教育部党组书记、部长怀进鹏出席会议并讲话。浙江省副省长卢山主持会议。
+                                <br>
+                                怀进鹏指出，习近平总书记对高校毕业生就业工作念兹在兹，多次作出系列重要指示批示。在毕业生离校后持续做好促就业工作，不仅是教育工作、民生工作，更是政治工作。各地教育部门和各高校要坚决贯彻落实党中央、国务院决策部署，增强政治自觉、思想自觉和行动自觉，准确把握形势特点和任务要求，锚定确保高校毕业生就业总体稳定目标，形成教育与人社部门常态化协同工作机制，推动各项促就业工作整体再加力。要做好教育服务现代化发展大文章，统筹推进教育科技人才一体发展，树立全新教育观，鼓励高等学校、职业学校与民营经济组织创新合作机制，开展技术交流和成果转移转化，促进人才供需更有效对接适配，助力新质生产力发展。
+                                <br>
+                                怀进鹏强调，各地教育部门和各高校要聚焦突出问题，坚持效果导向，真正做到服务“不断线”。要坚持狠抓政策落实“不断线”，确保政策尽快落地见效、见人见岗，推动增量政策举措落实到位，继续保持线上线下招聘活动有效性。要坚持岗位资源开发“不断线”，精细精准做好人岗对接，用好“东中西部校企对接促就业”活动成果，通过发动校友企业等再汇集一批岗位资源。要坚持跟踪帮扶援助“不断线”，根据需要做好兜底安置，校院领导干部要带头包保帮扶，根据不同群体分类施策，会同相关部门对特别困难的毕业生群体做好兜底安置。要坚持就业数据审核“不断线”，从严从实开展数据审核，确保真实准确。
+                                <br>
+                                怀进鹏指出，做好就业工作没有捷径，关键在于抓落实。要加强组织领导，压紧压实责任，落实好就业“一把手工程”。固化有效的政策机制，切实提高就业工作质量和水平。
+                                <br>
+                                浙江省教育厅、省人力资源和社会保障厅、广西壮族自治区教育厅、绍兴市政府、张家港市人力资源和社会保障局介绍了促进高校毕业生就业、做好离校未就业毕业生“不断线”服务工作情况。海澜集团、浙江晶盛机电股份有限公司、宁夏大学、衡阳师范学院相关负责同志，浙江理工大学、金华职业技术大学毕业生代表作交流发言。
+                                <br>
+                                在绍兴期间，怀进鹏还观摩了东中西部校企对接促就业活动，赴浙江邮电职业技术学院、浙江省现代纺织技术创新中心调研，深入了解促进高校毕业生就业、校企合作、人才培养、传统优势产业转型升级等情况。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">教育部部署高校毕业生就业“百日冲刺”行动</div>
+                            <div class="layuimini-notice-extra">2025-06-06 11:02</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                日前，教育部印发通知，部署各地各高校抢抓离校前促就业关键冲刺期，以“凝心聚力拓岗位 百日冲刺促就业”为主题，深入开展2025届高校毕业生就业“百日冲刺”行动，加力挖潜拓展就业岗位，加强毕业生就业观念引导，精准做好就业指导服务。
+                                <br>
+                                通知要求，各地各高校要加力拓展市场化就业岗位。组织开展就业创业“政策宣传月”活动，大力宣传扩岗补助、增人增资、社保补贴、求职补贴等促就业政策，推动各项政策举措加快落地见效。有针对性开展访企拓岗，加大校院两级领导班子成员访企拓岗工作力度。加力组织校园招聘活动，保持校园招聘热度和学生参与度。大力推进公共就业服务进校园，支持高校联合地方人力资源社会保障部门合作设立校园就业公共服务站。办好“国聘行动”“全国中小企业百日招聘”“百城千校万企”促就业行动等品牌活动。充分发挥行业协会商会等社会组织作用，多方汇集企业岗位资源。推进实施“共建共享岗位精选计划”，加大就业岗位归集共享。
+                                <br>
+                                通知强调，各地各高校要加快组织政策性岗位招录。抓紧推进专升本、第二学士学位招录、中小学幼儿园教师招聘，以及公务员和事业单位、国有企业、科研助理等岗位招录，确保8月底前全部完成。持续做好“特岗计划”“三支一扶”“西部计划”“大学生乡村医生专项计划”等国家基层服务项目组织动员，鼓励各地加大地方基层项目招录规模。加大社区专职工作人员面向高校毕业生招聘力度。
+                                <br>
+                                通知要求，各地各高校要加大就业指导和帮扶工作力度。深入实施就业能力提升“双千”计划，加快“微专业”和职业能力培训课程建设。实施“百县对百校促就业行动”，重点挖掘百强县等县域内优质企业岗位资源。建立困难群体毕业生实名帮扶台账。加快实施年度“宏志助航计划”，为离校未就业毕业生持续提供“不断线”就业服务。深入开展高校毕业生就业典型宣传季活动，强化毕业生就业观念引导。加强毕业生就业安全教育，深入开展清理整顿人力资源市场秩序专项行动，严厉打击各类就业违规违法行为。
+                                <br>
+                                通知强调，各地各高校要认真落实毕业去向登记制度，准确把握就业监测指标，严格审核毕业生就业材料和去向信息，规范做好毕业去向登记。
+
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">2025年科研助理岗位供需对接活动暨直播带岗活动启动</div>
+                            <div class="layuimini-notice-extra">2025-06-25 11:55</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                为深入贯彻落实党中央、国务院“稳就业”“保就业”决策部署，加快落实《促进高校毕业生就业增量政策举措》有关要求，根据《工业和信息化部等九部门关于开发科研助理岗位招录高校毕业生工作的通知》和《教育部办公厅关于做好2025年高等学校开发科研助理岗位吸纳毕业生就业工作的通知》相关要求，进一步强化科研助理岗位开发、落实和相关政策宣传工作，教育部、工业和信息化部决定举办2025年科研助理岗位供需对接活动暨直播带岗活动。
+                                <br>
+                                本次活动采取“主办引领、全国联动”的模式，由教育部、工业和信息化部统筹指导，各地区教育行政部门和高新区管委会主办，相关高校承办，面向全国有科研助理招聘需求的企业、高校、科研院所等用人单位和2025届未就业高校毕业生及离校两年内未就业毕业生，聚焦深挖岗位释放潜力、创新供需对接模式、扩大政策宣传影响、赋能科技创新队伍，开展线上线下招聘会和各地区直播带岗活动。
+                                <br>
+                                本次活动启动仪式将于6月26日上午9:00在云南大学举行，并在云南民族大学同步举办“百县对百校促就业行动”人才招聘会暨2025年科研助理岗位专场招聘会。同时，还将在国家大学生就业服务平台、国聘平台、智联招聘平台开设线上招聘专题页面，供用人单位免费发布科研助理岗位招聘信息、高校毕业生浏览查询和投递简历。平台线上招聘活动将持续至2025年8月31日。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">高校毕业生就业政策举措落实工作推进会召开</div>
+                            <div class="layuimini-notice-extra">2025-06-04 14:53</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                为深入学习贯彻习近平总书记关于高校毕业生就业工作的重要指示批示精神，贯彻落实中央教育工作领导小组有关决策要求，5月30日，中央教育工作领导小组秘书组、教育部在京召开高校毕业生就业政策举措落实工作推进会，深入宣传解读促进高校毕业生就业系列政策举措，进一步挖潜拓展就业岗位，凝聚各地各部门工作合力，抢抓关键冲刺期，全力做好2025届高校毕业生就业工作。中央教育工作领导小组秘书组组长、教育部党组书记、部长怀进鹏出席会议并讲话。
+                                <br>
+                                会议指出，以习近平同志为核心的党中央高度重视、十分关心高校毕业生就业工作。习近平总书记强调要坚持把高校毕业生等青年群体就业作为重中之重。有关部门和各地各高校要提高政治站位，深刻认识做好今年高校毕业生就业工作的极端重要性，切实增强责任感和紧迫感，把思想和行动统一到党中央决策部署上来。稳就业是政治工作、经济工作、民生工作，是大家共同的责任。要算好政治账、经济账、民生账，全力确保今年高校毕业生就业稳定，以高校毕业生就业稳促大局稳。
+                                <br>
+                                会议强调，当前距离毕业生大规模集中离校只有一个月左右的时间，要与时间赛跑，推动促就业工作整体再加力，用政策配置、资金投入等撬动更大岗位增量，加快促就业政策落实落地，千方百计迅速拓展一批吸纳高校毕业生就业的新岗位。一要支持各地积极行动，加强增量政策的有效落实，充分发挥主动性和创造力拓展岗位。经济大省要发挥岗位资源丰富优势进一步扩大吸纳能力，支持有条件的地方建设区域性就业大市场。生源大省和中西部就业压力较大的省份要主动开展跨区域就业资源对接，积极开展访企拓岗和“百县对百校促就业行动”。鼓励支持推出地方性增量政策，扩大重点领域吸纳就业能力，挖掘基层吸纳就业潜力。二要压实高校主体责任，集全校之力完成冲刺阶段各项促就业任务。要真正把就业“一把手工程”落到实处，保持校园招聘热度和实效，汇集更多有利于发挥所学所长的就业岗位。用心用情做好困难群体帮扶，落实“一对一”帮扶责任，实施“双千”计划提升毕业生就业能力，符合条件的鼓励攻读第二学士学位，做好离校未就业毕业生服务衔接。三要鼓励企业稳岗扩岗，用好各类优惠政策，着眼未来发展储备人才。实施“国有企业招聘扩容计划”，重点向战略性新兴产业和技能人才规模较大领域一线挖掘岗位。发动规模以上民营企业、新兴领域有较大发展潜力的民营企业进一步扩大招聘高校毕业生规模，做好社会组织岗位归集发布工作。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-fire icon"></i>系统信息</div>
+                    <div class="layui-card-body layui-text">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="100">
+                                <col>
+                            </colgroup>
+                            <tbody>
+							<tr>
+								<td>
+									系统名称
+								</td>
+								<td>
+									大学生毕业生就业信息管理系统
+								</td>
+								
+							</tr>
+                            <tr>
+                                <td>作者</td>
+                                <td>
+                                    孔令暄
+                                </td>
+                            </tr>
+							<tr>
+							    <td>指导教师</td>
+							    <td >
+							        吴志军老师 张国红老师
+							    </td>
+							</tr>
+                            <tr>
+                                <td>当前版本</td>
+                                <td>v1.0.0</td>
+                            </tr>
+                            <tr>
+                                <td>主要特色</td>
+                                <td>零门槛 / 响应式 / 清爽 / 极简</td>
+                            </tr>
+                            <tr>
+                                <td>创作时间</td>
+                                <td>
+                                    2025/09
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>系统框架</td>
+                                <td>
+                                    Layui
+                                </td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-paper-plane-o icon"></i>习言习语</div>
+                    <div class="layui-card-body layui-text layadmin-text">
+                        就业是家事，更是国事。各级党委和政府要把就业当作民生头等大事来抓，加强组织领导，健全制度机制，增强工作合力。要加快建构中国就业理论体系，积极讲好中国就业故事，有效提升我国在就业领域的国际话语权和影响力。
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use(['layer', 'miniTab','echarts'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            miniTab = layui.miniTab,
+            echarts = layui.echarts;
+
+        miniTab.listen();
+
+        /**
+         * 查看公告信息
+         **/
+        $('body').on('click', '.layuimini-notice', function () {
+            var title = $(this).children('.layuimini-notice-title').text(),
+                noticeTime = $(this).children('.layuimini-notice-extra').text(),
+                content = $(this).children('.layuimini-notice-content').html();
+            var html = '<div style="padding:15px 20px; text-align:justify; line-height: 22px;border-bottom:1px solid #e2e2e2;background-color: #2f4056;color: #ffffff">\n' +
+                '<div style="text-align: center;margin-bottom: 20px;font-weight: bold;border-bottom:1px solid #718fb5;padding-bottom: 5px"><h4 class="text-danger">' + title + '</h4></div>\n' +
+                '<div style="font-size: 12px">' + content + '</div>\n' +
+                '</div>\n';
+            parent.layer.open({
+                type: 1,
+                title: '就业要闻'+'<span style="float: right;right: 1px;font-size: 12px;color: #b1b3b9;margin-top: 1px">'+noticeTime+'</span>',
+                area: '300px;',
+                shade: 0.8,
+                id: 'layuimini-notice',
+                btn: ['取消'],
+                btnAlign: 'c',
+                moveType: 1,
+                content:html,
+                success: function (layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        
+                        target: '_blank'
+                    });
+                }
+            });
+        });
+
+        /**
+         * 报表功能
+         */
+       var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+       var optionRecords = {
+           tooltip: {
+               trigger: 'axis'
+           },
+           legend: {
+               data:['国内升学','出国留学','企业就业','事业单位','自主创业','缓冲期']
+           },
+           grid: {
+               left: '3%',
+               right: '4%',
+               bottom: '3%',
+               containLabel: true
+           },
+           toolbox: {
+               feature: {
+                   saveAsImage: {}
+               }
+           },
+           xAxis: {
+               type: 'category',
+               boundaryGap: false,
+               data: ['2019','2020','2021','2022','2023','2024','2025']
+           },
+           yAxis: {
+               type: 'value',
+               name: '人数'
+           },
+           series: [
+               {
+                   name:'国内升学',
+                   type:'line',
+                   data:[320, 350, 410, 450, 520, 580, 620]
+               },
+               {
+                   name:'出国留学',
+                   type:'line',
+                   data:[180, 160, 140, 120, 100, 90, 85]
+               },
+               {
+                   name:'企业就业',
+                   type:'line',
+                   data:[850, 890, 930, 980, 1050, 1120, 1200]
+               },
+               {
+                   name:'事业单位',
+                   type:'line',
+                   data:[280, 310, 340, 360, 390, 420, 450]
+               },
+               {
+                   name:'自主创业',
+                   type:'line',
+                   data:[60, 75, 90, 110, 130, 150, 180]
+               },
+               {
+                   name:'缓冲期',
+                   type:'line',
+                   data:[150, 180, 220, 280, 320, 350, 380]
+               }
+           ]
+       };
+       echartsRecords.setOption(optionRecords);
+
+
+        // echarts 窗口缩放自适应
+        window.onresize = function(){
+            echartsRecords.resize();
+        }
+
+    });
+</script>
+</body>
+</html>

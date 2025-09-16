@@ -1,0 +1,57 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+	{
+	  "id": 10002,
+	  "username": "埃科光电",
+	  "edbg": "是",
+	  "city": "否"
+	},
+	{
+	  "id": 10003,
+	  "username": "伴芯科技",
+	  "edbg": "否",
+	  "city": "否"
+	},
+	{
+	  "id": 10005,
+	  "username": "上证信息",
+	  "edbg": "是",
+	  "city": "是"
+	},
+	{
+	  "id": 10006,
+	  "username": "京东",
+	  "edbg": "否",
+	  "city": "否"
+	},
+	{
+	  "id": 10007,
+	  "username": "思必驰",
+	  "edbg": "否",
+	  "city": "否"
+	},
+	{
+	  "id": 10008,
+	  "username": "高徒集团",
+	  "edbg": "是",
+	  "city": "是"
+	},
+	{
+	  "id": 10010,
+	  "username": "小天才",
+	  "edbg": "是",
+	  "city": "是"
+	},
+	{
+	  "id": 10011,
+	  "username": "诺瓦星云",
+	  "edbg": "否",
+	  "city": "否"
+	}
+
+	
+  ]
+}
